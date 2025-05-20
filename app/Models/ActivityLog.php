@@ -22,4 +22,14 @@ class ActivityLog extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public static function logAction($userId, $action, $details = null)
+    {
+        self::create([
+            'user_id' => $userId,
+            'action' => $action,
+            'details' => $details,
+            'timestamp' => now(),
+        ]);
+    }
 }

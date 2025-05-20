@@ -70,8 +70,8 @@ class UserController extends Controller
             auth()->id(),
             'Created Complaint',
             "Created complaint ID {$complaint->id} with issue type {$request->issue_type}"
+            
         );
-
         return redirect()->back()->with('success', 'Complaint submitted successfully');
     }
 

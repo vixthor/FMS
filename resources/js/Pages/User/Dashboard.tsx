@@ -38,7 +38,7 @@ export default function UserDashboard({
         room_number: "",
         issue_type: "",
         details: "",
-        priority: "",
+    
     });
 
     const handleSubmit = (e: React.FormEvent) => {
